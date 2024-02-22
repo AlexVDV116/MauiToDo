@@ -17,7 +17,9 @@ public partial class MainPage : ContentPage
 
         _ = Initialize();
 
-        TodosCollection.ItemsSource = Todos;
+        // Sets the ItemSource of the ToDoCollection CollectionView to the Observable Collection
+        // This can also be achieved in the XAML, preffered when using MVVM to maintain clean seperation of concerns
+        //TodosCollection.ItemsSource = Todos;
     }
 
     private async Task Initialize()
