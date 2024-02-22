@@ -71,8 +71,7 @@
                     Grid.Row="0"
                     Grid.Column="1"/>
 
-                        <Label Text="{Binding Due, StringFormat=
- '{0:dd MMM yyyy}'}"
+                        <Label Text="{Binding Due, StringFormat='{0:dd MMM yyyy}'}"
                     Grid.Column="1"
                     Grid.Row="1"/>
                     </Grid>
