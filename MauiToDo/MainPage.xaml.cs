@@ -17,6 +17,7 @@ public partial class MainPage : ContentPage
 
         _ = Initialize();
 
+        // You represent lists of complex models onscreen using a CollectionView. A CollectionView has a property called ItemsSource that can be bound to a List of items using data binding. 
         // Sets the ItemSource of the ToDoCollection CollectionView to the Observable Collection
         // This can also be achieved in the XAML, preffered when using MVVM to maintain clean seperation of concerns
         //TodosCollection.ItemsSource = Todos;

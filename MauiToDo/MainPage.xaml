@@ -40,8 +40,10 @@
                 HorizontalOptions="Center"
                 Clicked="Button_Clicked"/>
 
-        <!-- Set the ItemsSource to the Todos ObservableCollection to access each element-->
+        <!-- CollectionView also has a property called ItemTemplate, and you assign it a DataTemplate that defines how each item in the collection should be displayed. -->
+        <!-- Set the ItemsSource to the Todos ObservableCollection to access each element -->
         <!-- Use the DataTemplate to define how each item in the collection should be displayed -->
+        
         <CollectionView Grid.Row="4"
                 ItemsSource="{Binding Todos}"
                 x:Name="TodosCollection">
