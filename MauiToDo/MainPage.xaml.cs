@@ -1,6 +1,7 @@
 ﻿using MauiTodo.Data;
 using MauiTodo.Models;
 using System.Collections.ObjectModel;
+using MauiToDo;
 
 namespace MauiTodo;
 
@@ -50,5 +51,13 @@ public partial class MainPage : ContentPage
             TodoTitleEntry.Text = String.Empty;
             DueDatepicker.Date = DateTime.Now;
         }
+    }
+    
+    private async void SwipeItem_Invoked(object sender, EventArgs e)
+    {
+        var item = sender as SwipeItem;
+ 
+        await App.Current.MainPage.
+            DisplayAlert(item.Text, $"You invoked the {item.Text} action.", "OK");
     }
 }

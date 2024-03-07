@@ -13,7 +13,7 @@ namespace MauiTodo.Data
             var dataDir = FileSystem.AppDataDirectory;
             var databasePath = Path.Combine(dataDir, "MauiTodo.db");
 
-            string _dbEncryptionKey = SecureStorage.GetAsync("dbKey").Result;
+            string? _dbEncryptionKey = SecureStorage.GetAsync("dbKey").Result;
 
             if (string.IsNullOrEmpty(_dbEncryptionKey))
             {
