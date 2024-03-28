@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
+
 namespace MauiTodo.ViewModels;
 
 public class MainViewModel : INotifyPropertyChanged
@@ -64,18 +65,20 @@ public class MainViewModel : INotifyPropertyChanged
         }
     }
 
-    public async Task CompleteTodo(TodoItem todoitem)
+    public async Task CompleteTodo(TodoItem toDoItem)
     {
-        var completed = await _database.UpdateTodo(todoitem);
+        Console.WriteLine("Completing Todo");
+        var completed = await _database.UpdateTodo(toDoItem);
 
         OnPropertyChanged(nameof(Todos));
     }
 
-    public async Task DeleteTodo(TodoItem todoitem)
+    public async Task DeleteTodo(TodoItem toDoItem)
     {
-        var deleted = await _database.UpdateTodo(todoitem);
+        Console.WriteLine("Deleting Todo");
+        var deleted = await _database.DeleteTodo(toDoItem);
 
-        Todos.Remove(todoitem);
+        Todos.Remove(toDoItem);
 
         OnPropertyChanged(nameof(Todos));
     }
